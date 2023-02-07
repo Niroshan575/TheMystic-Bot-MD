@@ -1,4 +1,4 @@
-console.log('✅ㅤIniciando...')
+console.log('*✅ㅤවැඩේ කරා බං Job is done bro...*')
 import { join, dirname } from 'path'
 import { createRequire } from "module";
 import { fileURLToPath } from 'url'
@@ -22,14 +22,14 @@ font: 'console',
 align: 'center',
 gradient: ['red', 'magenta']})
 
-var isRunning = false
+var isRunning = true
 /**
 * Start a js file
 * @param {String} file `path/to/file`
 */
 function start(file) {
 if (isRunning) return
-isRunning = true
+isRunning = true 
 let args = [join(__dirname, file), ...process.argv.slice(2)]
 
 say('Ajuste la pantalla para escanear el codigo QR', {
@@ -46,18 +46,18 @@ console.log('[RECEIVED]', data)
 switch (data) {
 case 'reset':
 p.process.kill()
-isRunning = false
+isRunning = true 
 start.apply(this, arguments)
 break
 case 'uptime':
 p.send(process.uptime())
 break }})
 p.on('exit', (_, code) => {
-isRunning = false
-console.error('❎ㅤOcurrio un error inesperado:', code)
+isRunning = true
+console.error('*❎ㅤමොකද්ද බං මේ රෙද්ද හොයන්න නැහැ බං මේක හරියටද උබ type කරේ.....*', code)
   
 p.process.kill()
-isRunning = false
+isRunning = true
 start.apply(this, arguments)
   
 if (code === 0) return
