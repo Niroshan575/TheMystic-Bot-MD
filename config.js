@@ -88,3 +88,5 @@ watchFile(file, () => {
 unwatchFile(file)
 console.log(chalk.redBright("Update 'config.js'"))
 import(`${file}?update=${Date.now()}`)})
+
+   QueenNilu;;;ZjZTnKSJ#rBzoK4N6eW4J6Z09doykZLP6jUEAosfxzqsRE-cQpOQ
